@@ -1,0 +1,164 @@
+/* Import Playfair Display and Raleway Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;500&display=swap');
+
+/* ComingSoon.css */
+.coming-soon-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+.bubble-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  animation-name: float;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: transform 0.3s ease;
+}
+
+.bubble:hover {
+  transform: scale(1.5);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  font-family: 'Playfair Display', serif;
+}
+
+.content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-family: 'Playfair Display', serif;
+}
+
+.timer {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-top: 1rem;
+  letter-spacing: 0.1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 2.5rem;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+
+  .timer {
+    font-size: 1.2rem;
+  }
+}
+.flip-clock {
+  --fcc-flip-duration: 0.5s; /* transition duration when flip card */
+  --fcc-spacing: 8px; /* space between unit times and separators */
+  --fcc-digit-block-width: 30px; /* width of digit card */
+  --fcc-digit-block-height: 60px; /* height of digit card, highly recommend in even number */
+  --fcc-digit-block-radius: 5px; /* border radius of digit card */
+  --fcc-digit-block-spacing: 5px; /* space between blocks in each unit of time */
+  --fcc-digit-font-size: 30px; /* font size of digit */
+  --fcc-digit-color: #000; /* color of digit */
+  --fcc-label-font-size: 10px; /* font size of label */
+  --fcc-label-color: #fff; /* color of label */
+  --fcc-background: #fff; /* background of digit card */
+  --fcc-divider-color: #000; /* color of divider */
+  --fcc-divider-height: 1px; /* height of divider */
+  --fcc-separator-size: 6px; /* size of colon */
+  --fcc-separator-color: #fff; /* color of colon */
+}
+.coming-soon-container {
+  position: relative;
+  margin-bottom: 3vh;
+  width: 100%;
+  height: 100vh;
+  background-color: #121212;
+  overflow: hidden;
+}
+.text-background{
+  margin-bottom: 5vh;
+}
+.background-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  width: 100%;
+  height: 100%;
+}
+
+.grid-cell {
+  width: 100%;
+  height: 100%;
+  background-color: #121212;
+  transition: background-color 0.1s ease-in-out, color 10s ease-in-out;
+}
+
+.grid-cell:hover {
+  background-color: rgb(46, 154, 154);
+  transition: background-color 0.1s ease-in-out, color 10s ease-in-out;
+}
+
+
+
+/* Blitzschlag text styling */
+.blitzschlag-text {
+  font-weight: 800;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10; /* Above the grid */
+  height: 100%; /* Center the content vertically */
+}
+

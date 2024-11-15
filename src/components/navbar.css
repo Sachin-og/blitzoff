@@ -1,0 +1,50 @@
+/* components/Navbar.module.css */
+
+.navbar {
+    width: 100%;
+    position: fixed; /* Makes the navbar stay at the top */
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    backdrop-filter: blur(10px); /* Optional: adds a slight blur effect */
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
+  
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff; /* Logo color */
+    text-decoration: none;
+  }
+  
+  .navMenu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .navMenu li {
+    display: inline-block;
+  }
+  
+  .navMenu li a {
+    color: #fff; /* Link color */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .navMenu li a:hover {
+    color: #ffcc00; /* Link hover color */
+  }
+  
